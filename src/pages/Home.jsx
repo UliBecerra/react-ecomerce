@@ -125,7 +125,7 @@ function Home() {
           <h2 className="text-lg font-medium text-gray-700">Price</h2>
           <i  className={`bx bx-chevron-up ${showPriceFilter ? 'rotate-180' : 'rotate-0'} transition-transform duration-700 `} ></i>
           </div>
-          <form className={ `overflow-hidden ${showPriceFilter ? 'h-[250px]' : 'h-0'} transition-[height]  duration-700 px-2`} onSubmit={handleSubmitPriceFilter} >
+          <form className={ `overflow-hidden ${showPriceFilter ? 'max-h-[1000px] ' : 'max-h-0'} transition-[max-height] duration-700 px-2`} onSubmit={handleSubmitPriceFilter} >
             <div className={`grid grid-cols-[1fr_4fr] w-[264px] justify-end gap-4 py-6`}>
             <label className=" text-lg text-[#4f4f4f]"  htmlFor="fromPrice">From</label>
             <input className="h-[35px] border-[1px]" type="number" name="fromPrice" id="fromPrice" />
@@ -145,7 +145,7 @@ function Home() {
         <h2 className="text-lg font-medium text-gray-700" >Category</h2>
         <i  className={`bx bx-chevron-up ${showCategories ? 'rotate-180' : 'rotate-0'} transition-transform duration-700 `} ></i>
         </div>
-      <ul className={`overflow-hidden ${showCategories ? 'h-[150px]' : 'h-0' } transition-[height]  duration-700 px-6 pt-4`}>
+      <ul className={`overflow-hidden ${showCategories ? 'max-h-[1000px]' : 'max-h-0' } transition-[max-height]  duration-700 px-6 pt-4`}>
           <li className="cursor-pointer text-lg text-[#4f4f4f]" onClick={handleClickCategory} data-category={0}>All</li>
           {
             categories.map((category) => <li className="cursor-pointer text-lg text-[#4f4f4f] "   onClick={handleClickCategory} data-category={category.id} key={category.id}>{category.name}</li> )
